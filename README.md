@@ -1,6 +1,6 @@
 # Interactive rating
 
-![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)
+![desktop-design](https://user-images.githubusercontent.com/89385798/181566007-4a5d500f-1019-4a34-9a83-14e20af721b6.jpg)
 
 <!-- ## The challenge
 

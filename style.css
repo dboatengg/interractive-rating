@@ -1,0 +1,129 @@
+/* color variables */
+:root {
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --MediumGrey: hsl(216, 12%, 54%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+  --Orange: hsl(25, 97%, 53%);
+  --DeepOrange: #e52;
+  --UncheckedColor: #888;
+  --CheckedColor: #fe7;
+  --mobile: 375px;
+  --desktop: 1440px;
+  --bodyText: 15px;
+  --lightText: 400;
+  --boldText: 700;
+}
+
+/* css reset  */
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--VeryDarkBlue);
+  color: var(--White);
+  margin: 0;
+  padding: 0;
+  font-size: var(--bodyText);
+  font-family: "Overpass", sans-serif;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  /* text-align: center; */
+}
+p {
+  line-height: 1.9rem;
+}
+.submit_img {
+  background: var(--VeryDarkBlue);
+  padding: 1rem;
+  border-radius: 50%;
+}
+.submit_text {
+  color: var(--LightGrey);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  max-width: 400px;
+  background-image: radial-gradient(
+    farthest-corner at 60% 10%,
+    var(--DarkBlue),
+    var(--VeryDarkBlue)
+  );
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.2);
+}
+.submit_stars input {
+  display: none;
+}
+.submit_stars label {
+  font-size: 4rem;
+  color: #888;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  float: right;
+}
+.submit_stars {
+  display: inline-block;
+  margin: 15px 0;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+  color: var(--CheckedColor);
+}
+input:checked ~ label {
+  color: var(--CheckedColor);
+}
+input#rating-5:checked ~ label {
+  text-shadow: 0 0 15px #952;
+}
+.submit_button .button {
+  width: 100%;
+  background: var(--Orange);
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 10px;
+  font-weight: 600;
+  color: var(--White);
+  transition: 0.2s ease-in-out;
+}
+.submit_button .button:hover {
+  background: var(--White);
+  color: var(--Orange);
+}
+form .textarea {
+  width: 100%;
+  overflow: hidden;
+}
+form .textarea textarea {
+  width: 100%;
+  resize: none;
+  border: 1px solid #333;
+  outline: none;
+  background: var(--DarkBlue);
+  color: #eee;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.7rem;
+  height: 100%;
+  border-radius: 5px;
+  padding: 10px;
+}
+.container form {
+  display: none;
+}
+input:checked ~ form {
+  display: block;
+}

@@ -1,21 +1,25 @@
-// let radio = document.querySelectorAll(".opt");
-// let formEle = document.querySelector(".form");
+//
+let submitState = document.querySelector(".submit");
+let postState = document.querySelector(".post");
+let button = document.querySelector(".button");
+let radio = document.querySelectorAll(".opt");
+let form = document.querySelector(".form");
 
-// Array.from(radio).forEach(function (radioItem) {
-//   if (radioItem.checked === true) {
-//     formEle.style.backgroundColor = "red";
-//     console.log("hello");
-// formEle.style.display = "none";
-//   }
-// formEle.style.display = "none";
-//   formEle.style.backgroundColor = "blue";
-//   console.log("hi");
-// });
+// Show posted message when button is clicked
+function displayPost() {
+  button.addEventListener("click", () => {
+    submitState.style.display = "none";
+    postState.style.display = "block";
+  });
+}
+displayPost();
 
-// Array.from(radio).forEach(function (ele) {
-//   if (ele.checked === true) {
-//     console.log("hello");
-//   }
-//   console.log("wow");
-// });
-// showForm();
+// Show textarea when a start is clicked
+function showForm() {
+  Array.from(radio).forEach(function (ele) {
+    ele.addEventListener("click", () => {
+      form.style.display = "block";
+    });
+  });
+}
+showForm();

@@ -1,25 +1,36 @@
 //
-let submitState = document.querySelector(".submit");
-let postState = document.querySelector(".post");
-let button = document.querySelector(".button");
-let radio = document.querySelectorAll(".opt");
-let form = document.querySelector(".form");
+const submitState = document.querySelector(".submit");
+const postState = document.querySelector(".post");
+const button = document.querySelector(".button");
+const radio = document.querySelectorAll(".opt");
+const form = document.querySelector(".form");
+const choice = document.querySelector(".post__number");
+const submitLabel = document.querySelectorAll(".submit_stars label");
 
-// Show posted message when button is clicked
-function displayPost() {
-  button.addEventListener("click", () => {
-    submitState.style.display = "none";
-    postState.style.display = "block";
-  });
-}
-displayPost();
+Array.from(submitLabel).forEach(function (label) {
+  console.log(label);
+  // label.style.float = "left";
+});
 
-// Show textarea when a start is clicked
+let btn_ = 0;
 function showForm() {
   Array.from(radio).forEach(function (ele) {
     ele.addEventListener("click", () => {
       form.style.display = "block";
+      btn_ = ele.value;
+      console.log(ele.value);
     });
+  });
+
+  button.addEventListener("click", () => {
+    if (btn_ === 0) {
+      alert("Kindly rate us before you sumbit!");
+    } else {
+      //   label.style.float = "left";
+      choice.textContent = btn_;
+      submitState.style.display = "none";
+      postState.style.display = "block";
+    }
   });
 }
 showForm();

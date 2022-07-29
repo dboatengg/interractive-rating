@@ -35,6 +35,9 @@
             src="images/illustration-thank-you.svg"
             alt=""
           />
+          <p class="post__inform">
+            You selected <span class="post__number"></span> out of 5
+          </p>
           <h2 class="post__title">Thank you!</h2>
           <p class="post__text">
             We appreciate you taking the time to give a rating. If you ever need
@@ -53,28 +56,59 @@
               offering!
             </p>
             <div class="submit_stars">
-              <input type="radio" name="rating" class="opt" id="rating-5" />
+              <input
+                type="radio"
+                name="rating"
+                class="opt"
+                id="rating-5"
+                value="1"
+              />
               <label for="rating-5" class="fas fa-star"></label>
 
-              <input type="radio" name="rating" class="opt" id="rating-4" />
+              <input
+                type="radio"
+                name="rating"
+                class="opt"
+                id="rating-4"
+                value="2"
+              />
               <label for="rating-4" class="fas fa-star"></label>
 
-              <input type="radio" name="rating" class="opt" id="rating-3" />
+              <input
+                type="radio"
+                name="rating"
+                class="opt"
+                id="rating-3"
+                value="3"
+              />
               <label for="rating-3" class="fas fa-star"></label>
 
-              <input type="radio" name="rating" class="opt" id="rating-2" />
+              <input
+                type="radio"
+                name="rating"
+                class="opt"
+                id="rating-2"
+                value="4"
+              />
               <label for="rating-2" class="fas fa-star"></label>
 
-              <input type="radio" name="rating" class="opt" id="rating-1" />
+              <input
+                type="radio"
+                name="rating"
+                class="opt"
+                id="rating-1"
+                value="5"
+              />
               <label for="rating-1" class="fas fa-star"></label>
             </div>
 
             <form action="#" class="form">
               <div class="textarea">
                 <textarea
+                  required
                   name="comment"
                   id=""
-                  placeholder="Write comment here..."
+                  placeholder="Write comment here (optional)"
                 ></textarea>
               </div>
             </form>

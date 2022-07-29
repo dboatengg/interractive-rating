@@ -141,7 +141,7 @@ form {
     width: 90%;
   }
   .submit_stars label {
-    font-size: 3.5rem;
+    /* font-size: 4rem; */
     margin-right: 5px;
   }
   form .textarea textarea {
